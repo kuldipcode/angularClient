@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="sampleAAp">
+<head>
+<meta charset="UTF-8">
+<script src="angular.js"></script>
+<script src="jquery.js"></script>
+<script src="github.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.8.1/angular-translate.js"></script>
+<style type="text/css"> html { 
+  background: url(images/background.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#pageContainer{top: 20px;margin: 50px;height: 800px;}#tb1{float: left;border: 2px black solid;background-color: lightgrey;padding: 20px} </style>
+<title>Github App</title>
+</head>
+<body>
+<div id="pageContainer" ng-controller = "myCtrl2">
+<p><b>Enter github username</b></p>
+<input type="text" ng-model="uName"></input><br><br>
+<button id="btn1" ng-click="showInfo()">User info and repo info</button>
+<table id="tb1">
+<tr>
+	<td ng-model="git"><b>User info is as below:</b></td><br>	
+</tr>
+<tr>
+	<td>Login: {{login}}</td>
+	<td>Id: {{id}}</td>
+</tr>
+<tr>
+	<td>Name: {{name}}</td>
+	<td>Company: {{company}}</td>
+</tr>
+<tr>
+	<td>Location: {{location}}</td>
+	<td>e-mail: {{email}}</td>
+</tr>
+<tr>
+	<td><b>Repo info is as below:</b></td><br>	
+</tr>
+<tr>
+    <td>Owner login: {{rOlogin}}</td><br>
+	<td>Owner Id: {{rOid}}</td><br>
+	<td>Repo Id: {{rId}}</td><br>	
+</tr>
+<tr>
+	<td>Repo Name: {{rName}}</td>
+</tr>
+<tr>
+	<td>Repo Full name: {{rFull}}</td>
+</tr>
+<tr>	
+	<td>Owner Url: {{rOurl}}</td>
+</tr>
+</table>
+</div>
+</div>
+</body>
+</html>
