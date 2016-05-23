@@ -15,3 +15,7 @@ Getting Started
 4. Go to browser and listen on localhost:8080
 5. Enter git user name and click button.
 6. Result will be available in table.
+
+Referances;
+
+1) https://github.com/pavadeli/angularjs-errorhandling

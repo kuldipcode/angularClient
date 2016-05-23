@@ -1,4 +1,4 @@
-var myAAp = angular.module("sampleAAp",[]);
+var myAAp = angular.module("sampleAAp",['demo.errorHandler']);
 
 // Controller
 myAAp.controller("myCtrl2",function($scope,httpService,repoService){
@@ -31,6 +31,10 @@ $scope.showInfo = function(){
    };
 });
 
+myAAp.config(function (errorHandlerProvider, $provide) {
+		errorHandlerProvider.decorate($provide, ['httpService']);
+	})
+
 // Factory for Username Info 
 myAAp.factory('httpService', function($http, $log){
 	return {
@@ -44,6 +48,10 @@ myAAp.factory('httpService', function($http, $log){
    }
   };             
 });
+
+myAAp.config(function (errorHandlerProvider, $provide) {
+		errorHandlerProvider.decorate($provide, ['repoService']);
+	})
 
 // Factory for Repo Info
 
